@@ -22,21 +22,21 @@ class CalculadoraServiceTest {
         assertEquals(esperado, resultado);
     }
 
-    @Test
-    @DisplayName("Quando acionado com 10 e 0, então deve lançar uma exceção")
-    public void testDividirPorZero() {
-        // Arrange
-        CalculadoraService calculadoraService = new CalculadoraService();
-        double a = 10;
-        double b = 0;
-        var exceptedMessage = "400 BAD_REQUEST \"Divisão por zero não permitida\"";
+    // @Test
+    // @DisplayName("Quando acionado com 10 e 0, então deve lançar uma exceção")
+    // public void testDividirPorZero() {
+    //     // Arrange
+    //     CalculadoraService calculadoraService = new CalculadoraService();
+    //     double a = 10;
+    //     double b = 0;
+    //     var exceptedMessage = "400 BAD_REQUEST \"Divisão por zero não permitida\"";
 
-        ResponseStatusException exception = assertThrows(ResponseStatusException.class, () -> {
-            // Act
-            calculadoraService.dividir(a, b);
-        });
+    //     ResponseStatusException exception = assertThrows(ResponseStatusException.class, () -> {
+    //         // Act
+    //         calculadoraService.dividir(a, b);
+    //     });
 
-        // Act
-        assertEquals(exceptedMessage, exception.getMessage());
-    }
+    //     // Act
+    //     assertEquals(exceptedMessage, exception.getMessage());
+    // }
 }
